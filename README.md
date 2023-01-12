@@ -42,7 +42,16 @@ Next, we reduced data dimensions using PCA. We used only three principal compone
 ### Clustering Cryptocurrencies Using K-means
 To find the best value for ***k***, we used the elbow curve using ```hvPlot``` to find that ***k = 4***.
 
+![elbowcurve.png](Images/elbowcurve.png) 
 
 After initializing, fitting and predicting the model, we created a new dataframe ```clustered_df``` that uses the data from both the crypto and pcs dataframes. We then added the last column named "Class" that holds the predictions. The result was the final DataFrame below. 
 
+![clustered_df.png](Images/clustered_df.png) 
 
+
+### Visualizing Cryptocurrencies Results
+**3D Scatter Plot**
+
+**Table with Tradable Cryptocurrencies (Total of 532)**
+
+**Scatter Plot using ```hvPlot```**
