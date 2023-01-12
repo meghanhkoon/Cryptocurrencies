@@ -51,7 +51,10 @@ After initializing, fitting and predicting the model, we created a new dataframe
 
 ### Visualizing Cryptocurrencies Results
 **3D Scatter Plot**
+![3d_scatter.png](Images/3d_scatter.png) 
 
 **Table with Tradable Cryptocurrencies (Total of 532)**
+![table.png](Images/table.png) 
 
 **Scatter Plot using ```hvPlot```**
+![hvplot_scatter.png](Images/hvplot_scatter.png) 
