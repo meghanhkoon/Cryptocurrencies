@@ -15,5 +15,34 @@ Specifically we are creating:
 - Original Data Source: [crypto_data.csv](https://github.com/meghanhkoon/Cryptocurrencies/commit/f8833afdef808b41db08aaf77dea5fb32a484f30)
 - Software: Jupyter Notebook, Python, Python Libraries: ```pandas```, ```hvplot.pandas```, ```plotly```, ```sklearn```, and Anaconda mlenv environment
 
+
 ## Results 
 ### Preprocessing the data 
+Before pre-processing the crypto data, there were 1252 rows of cryptocurrencies in the csv. 
+
+![preprocess.png](Images/preprocess.png) 
+
+Using our knowledge of Pandas, the crypto_data.csv was preprocessed by: 
+- Reindexing the dataset.
+- Keeping all the cryptocurrencies that are being traded then removing the "IsTrading" column.
+- Dropping any rows that have at least one null value.
+- Keeping rows where coins are mined ```TotalCoinsMined > 0```.
+- Creating a new DataFrame that holds the cryptocurrencies names. Then dropping it from the clean dataset.
+- Lastly, getting text features and standardizing the data using ```fit_transform()``` function.
+
+After finally cleaning the data, we were left with **532 cryptocurrencies** that are currently tradable. 
+
+![preprocess2.png](Images/preprocess2.png) 
+
+
+### Reducing Data Dimensions Using PCA
+Next, we reduced data dimensions using PCA. We used only three principal components and created a new DataFrame with the three Principal Components using the scaled data in the previous part. 
+
+
+### Clustering Cryptocurrencies Using K-means
+To find the best value for ***k***, we used the elbow curve using ```hvPlot``` to find that ***k = 4***.
+
+
+After initializing, fitting and predicting the model, we created a new dataframe ```clustered_df``` that uses the data from both the crypto and pcs dataframes. We then added the last column named "Class" that holds the predictions. The result was the final DataFrame below. 
+
+
